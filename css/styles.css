@@ -31,7 +31,7 @@ a {
 .menu-nav .menu-nav-link:hover {
   color: #404bbf;
 }
-.menu-nav .menu-nav-link:active {
+.menu-nav .menu-nav-link:focus {
   color: #404bbf;
 }
 .address {
@@ -49,7 +49,7 @@ a {
   letter-spacing: 0.02em;
   color: #404bbf;
 }
-.contacts .contacts-link:active {
+.contacts .contacts-link:focus {
   color: #404bbf;
 }
 .hero-image {
