@@ -58,7 +58,7 @@ a {
 .title {
   font-weight: 700;
   font-size: 56px;
-  line-height: 1.07143;
+  line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
@@ -74,6 +74,9 @@ a {
 }
 .button:hover {
   background: #404bbf;
+}
+.button:focus {
+  background-color: #404bbf;
 }
 .features-title {
   font-weight: 500;
@@ -94,10 +97,14 @@ a {
 .team-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11111;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
+  text-transform: capitalize;
   color: #2e2f42;
+}
+.team-title-item {
+  background-color: #ffffff;
 }
 .team-title-name {
   font-weight: 500;
@@ -106,7 +113,6 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  background: #fff;
 }
 .team-title-name-skil {
   font-size: 16px;
@@ -114,7 +120,6 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #434455;
-  background: #fff;
 }
 .portfolio-title {
   font-weight: 700;
