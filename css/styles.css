@@ -30,7 +30,7 @@ img {
   margin: 0 auto;
   padding: 0 15px;
 }
-/* -------- Header styles -------- */
+/* ========Header styles======== */
 .header-nav {
   display: flex;
 }
@@ -83,7 +83,7 @@ img {
 .contacts .contacts-link:focus {
   color: #404bbf;
 }
-/* --------Hero image styles------- */
+/* ========Hero image styles======== */
 .hero-image {
   background: #2e2f42;
 }
@@ -110,7 +110,7 @@ img {
 .button:focus {
   background-color: #404bbf;
 }
-/* -------Section 1 styles------- */
+/* ========Section 1 styles======== */
 .features-title {
   font-weight: 500;
   font-size: 20px;
@@ -127,7 +127,7 @@ img {
 .team {
   background: #f4f4fd;
 }
-/* --------Section 2 styles-------- */
+/* ========Section 2 styles======== */
 .team-title {
   font-weight: 700;
   font-size: 36px;
@@ -155,7 +155,7 @@ img {
   text-align: center;
   color: #434455;
 }
-/* --------Section 3 styles-------- */
+/* =========Section 3 styles======== */
 .portfolio-title {
   font-weight: 700;
   font-size: 36px;
@@ -178,7 +178,7 @@ img {
   letter-spacing: 0.02em;
   color: #434455;
 }
-/* --------Footer styles-------- */
+/* ========Footer styles======== */
 .page-footer {
   background: #2e2f42;
 }
