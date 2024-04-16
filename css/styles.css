@@ -20,6 +20,7 @@ ol {
 }
 a {
   text-decoration: none;
+  display: inline-block;
 }
 img {
   display: block;
@@ -71,7 +72,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  padding: 24px 0;
+  /* padding: 24px 0; */
 }
 .menu-nav .menu-nav-link:hover {
   color: #404bbf;
@@ -230,6 +231,7 @@ img {
   text-align: center;
   color: #2e2f42;
   text-align: center;
+  margin-bottom: 8px;
 }
 .team-title-name-skil {
   font-size: 16px;
@@ -240,6 +242,10 @@ img {
   text-align: center;
 }
 /* =========Section 3 styles======== */
+.section-portfolio {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 .section-three {
   display: flex;
   flex-direction: column;
@@ -253,8 +259,8 @@ img {
   text-align: center;
   text-transform: capitalize;
   color: #2e2f42;
-  padding-top: 120px;
-  padding-bottom: 72px;
+
+  margin-bottom: 72px;
 }
 .portfolio-list {
   display: flex;
@@ -262,10 +268,14 @@ img {
   flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
-  padding-bottom: 120px;
 }
 .portfolio-item {
-  flex-basis: calc((100%-48px) / 3);
+  width: calc((100% - 48px) / 3);
+}
+.portfolio-bloc {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 .portfolio-title-project {
   font-weight: 500;
@@ -273,6 +283,7 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .portfolio-title-project-property {
   font-size: 16px;
@@ -297,7 +308,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  display: inline-block;
 
   margin-bottom: 16px;
 }
