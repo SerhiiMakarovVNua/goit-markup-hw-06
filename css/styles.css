@@ -286,6 +286,9 @@ img {
 }
 .footer-bloc {
   flex-direction: column;
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 .logo-footer {
   display: inline-block;
