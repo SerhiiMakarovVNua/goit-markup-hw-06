@@ -288,6 +288,7 @@ img {
   flex-direction: column;
 }
 .logo-footer {
+  display: inline-block;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -296,7 +297,6 @@ img {
   text-transform: uppercase;
   color: #4d5ae5;
   margin-bottom: 16px;
-  display: inline-block;
 }
 .logo-footer-studio {
   color: #f4f4fd;
