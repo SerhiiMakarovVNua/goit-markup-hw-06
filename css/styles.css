@@ -32,6 +32,7 @@ img {
 }
 /* ========Header styles======== */
 .header-border {
+  padding: 24px 0;
   border-bottom: 1px solid #e7e9fc;
 }
 .page-header {
@@ -41,8 +42,8 @@ img {
 }
 .header-nav {
   display: flex;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  /* padding-top: 24px; */
+  /* padding-bottom: 24px; */
   align-items: center;
 }
 .logo {
@@ -81,8 +82,8 @@ img {
 }
 .address {
   font-style: normal;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  /* padding-top: 24px; */
+  /* padding-bottom: 24px; */
 }
 .contacts {
   display: flex;
@@ -317,6 +318,5 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-
   width: 264px;
 }
