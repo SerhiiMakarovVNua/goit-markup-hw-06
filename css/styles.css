@@ -400,6 +400,7 @@ img {
 }
 .footer-bloc {
   display: flex;
+  align-items: baseline;
 }
 .logo-footer-bloc {
   display: inline-block;
