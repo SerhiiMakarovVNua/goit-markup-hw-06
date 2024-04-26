@@ -452,6 +452,9 @@ img {
 .soc-footer:hover {
   background-color: #31d0aa;
 }
+.soc-footer:focus {
+  background-color: #31d0aa;
+}
 .soc-footer-bloc {
   display: inline-block;
 }
