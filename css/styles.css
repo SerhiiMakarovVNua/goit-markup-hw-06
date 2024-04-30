@@ -536,8 +536,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  pointer-events: none;
+  opacity: 1;
+  pointer-events: auto;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -546,6 +546,10 @@ img {
   pointer-events: auto;
 }
 .modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
   max-width: 408px;
   min-height: 584px;
@@ -561,27 +565,34 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  text-align: center;
   margin-bottom: 16px;
 }
 .close-button {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 24px;
   right: 24px;
   width: 24px;
   height: 24px;
+  padding: 0;
   cursor: pointer;
   background-color: #e7e9fc;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-button:hover,
 .close-button:focus {
   background-color: #404bbf;
   border: none;
   fill: #ffffff;
+}
+.close-icon {
+  fill: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .feedback-form {
   margin-bottom: 16px;
@@ -590,6 +601,7 @@ img {
   margin-bottom: 8px;
 }
 .form-label {
+  display: block;
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
@@ -606,8 +618,10 @@ img {
   width: 360px;
   height: 40px;
   padding-left: 38px;
+  background-color: transparent;
   outline: transparent;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus {
   border: 1px solid #4d5ae5;
@@ -615,30 +629,33 @@ img {
 .form-input:focus + .form-icon {
   fill: #4d5ae5;
 }
-
 .form-icon {
   position: absolute;
   left: 16px;
   top: 50%;
   fill: #2e2f42;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-comment {
+  margin-bottom: 16px;
+}
+.form-textarea {
   width: 100%;
   height: 120px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  width: 360px;
-  height: 120px;
+  background-color: transparent;
+  resize: none;
   outline: transparent;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-comment::placeholder {
+.form-textarea::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16667;
@@ -647,16 +664,17 @@ img {
   padding-top: 8px;
   padding-left: 16px;
 }
-.form-comment:focus {
+.form-textarea:focus {
   border: 1px solid #4d5ae5;
 }
-
-.privacy-link {
-  text-decoration: underline;
-  display: inline-flex;
-  color: #4d5ae5;
-  line-height: 1.33;
-  cursor: pointer;
+.user-checkbox {
+  margin-bottom: 24px;
+}
+.form-label-privacy {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
 }
 .checkbox-change {
   width: 16px;
@@ -666,21 +684,31 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
+  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-checkbox-change {
-  border-radius: 2px;
-  fill: #f4f4fd;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.checkbox:checked + .form-label .checkbox-change {
+icon:checked + .checkbox-change {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
 }
+.privacy-link {
+  color: #4d5ae5;
+}
 .button-modal {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 24px;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4d5ae5;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
