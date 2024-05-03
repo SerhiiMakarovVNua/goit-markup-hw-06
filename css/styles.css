@@ -537,13 +537,13 @@ img {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  pointer-events: none;
+  visibility: hidden;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-overlay.is-open {
   opacity: 1;
-  pointer-events: auto;
+  visibility: visible;
 }
 .modal {
   top: 50%;
@@ -717,3 +717,6 @@ input:checked + .form-label-privacy .checkbox-change {
 .button-modal:active {
   background-color: #404bbf;
 }
+/* =====Breaking point 320px===== */
+/* =====Breaking point 768px===== */
+/* =====Breaking point 1158px===== */
