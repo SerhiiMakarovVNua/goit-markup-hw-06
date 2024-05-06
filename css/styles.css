@@ -1015,4 +1015,8 @@ input:checked + .form-label-privacy .checkbox-change {
   .soc-footer-bloc {
     margin-right: 80px;
   }
+  /* __________Modal 1158px__________ */
+  .form-input {
+    padding-left: 38px;
+  }
 }
