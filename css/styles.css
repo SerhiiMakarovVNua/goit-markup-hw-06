@@ -60,7 +60,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-right: 76px;
+  /* margin-right: 76px; */
 }
 .logo-studio {
   color: #2e2f42;
@@ -68,7 +68,6 @@ img {
 .menu-nav {
   display: none;
   padding-left: 0;
-  margin-right: 332px;
   gap: 40px;
 }
 .menu-nav-link {
@@ -107,16 +106,19 @@ img {
 .address {
   font-style: normal;
   display: none;
+  align-items: center;
 }
 .contacts {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  gap: 12px;
 }
 .contacts-link {
   padding: 0;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   color: #434455;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -219,8 +221,8 @@ img {
   gap: 72px;
 }
 
-.page-features .features-bloc {
-  flex-basis: calc((100%-216px) / 4);
+.features-bloc {
+  widths: calc((100%-216px) / 4);
   max-width: 288px;
 }
 
@@ -280,7 +282,6 @@ img {
 }
 .team-title-item {
   background-color: #ffffff;
-  flex-basis: calc((100%-216px) / 4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -305,6 +306,7 @@ img {
   text-align: center;
   color: #434455;
   text-align: center;
+  margin-bottom: 8px;
 }
 .soc-list {
   display: flex;
@@ -420,7 +422,6 @@ img {
 }
 .footer-bloc {
   display: flex;
-  /* align-items: baseline; */
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -429,7 +430,6 @@ img {
 .logo-footer-bloc {
   display: inline-block;
   flex-direction: column;
-  /* margin-right: 120px; */
 }
 .logo-footer {
   font-family: "Raleway", sans-serif;
@@ -813,4 +813,116 @@ input:checked + .form-label-privacy .checkbox-change {
   background-color: #404bbf;
 }
 /* =====Breaking point 768px===== */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  /* __________Header__________ */
+  .header-burger {
+    display: none;
+  }
+  .menu-nav {
+    display: flex;
+    margin-left: 120px;
+  }
+  .address {
+    display: flex;
+  }
+
+  /* __________Hero image__________ */
+  .hero-image {
+    padding: 112px 0;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office/people-office-tablet.jpg);
+    max-width: 768px;
+  }
+  @media screen and (min-resolution: 192dpi) {
+    .hero {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office/people-office-tablet@2x.jpg);
+    }
+  }
+  .title {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+    padding-bottom: 36px;
+  }
+  /* __________Section 1__________ */
+  .page-features {
+    /* display: flex; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+  .features-bloc {
+    width: calc((100% - 24px) / 2);
+    min-width: 356px;
+  }
+  .features-title {
+    text-align: start;
+  }
+  /* ___________Section 2__________ */
+  .team-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 64px;
+    column-gap: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+  .team-title-item {
+    width: calc((100% - 24px) / 2);
+    max-width: 264px;
+  }
+  /* __________Section 3__________ */
+  .portfolio-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+    /* max-width: 356px; */
+  }
+  .portfolio-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .overlay {
+    width: 100%;
+  }
+  /* __________Footer__________ */
+  .footer-bloc {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+    row-gap: 72px;
+    padding-left: 108px;
+  }
+  .logo-footer {
+    text-align: start;
+  }
+  .social-media {
+    text-align: start;
+  }
+  .form-footer {
+    /* display: flex; */
+    flex-direction: row;
+    gap: 24px;
+  }
+  .subscribe-footer {
+    text-align: start;
+  }
+}
 /* =====Breaking point 1158px===== */
